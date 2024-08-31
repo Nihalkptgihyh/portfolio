@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it stays on top of everything */
+    transition: opacity 1.00S ease, visibility 1.10s ease;
+}
+
+.loading-screen img {
+    width: 100%; /* Adjust based on your loading image */
+    height: 100%;
+}
+
+/* Fade In Effect for Title */
+.header-title h1 {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    transition: color 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    flex: 1; /* Allows the title to take up available space */
+    text-align: center;
+}
+
+.header-title h1 {
+    color: #f31d1d;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif; /* Stylish font */
+    margin: 0;
+}
+
+/* Buttons */
+.button-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+}
+
+.button-list li {
+    margin: 1;
+}
+
+.corner-button {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    background-color: #555;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.corner-button:hover {
+    background-color: #777;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow on hover */
+}
+
+/* Join Community Button */
+.join-community {
+    background-color: #d9534f; /* Red color */
+}
+
+.join-community:hover {
+    background-color: #c9302c; /* Darker red color */
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ccc;
+}
+
+body.dark-mode .header-title h1 {
+    color: #ccc; /* Light color for the title in dark mode */
+}
+
+body.dark-mode .corner-button {
+    background-color: #444;
+    color: #ccc; /* Light color for button text in dark mode */
+}
+
+body.dark-mode .corner-button:hover {
+    background-color: #666;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #ccc;
+    color: #333;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.profile p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Boy Container */
+.boy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Sample Boy Animation */
+.boy {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.cv-button-container {
+    position: fixed; /* Fixes the button position relative to the viewport */
+    left: 20px; /* Adjust this value to position closer or further from the left edge */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically centers the button */
+    text-align: left; /* Ensures content inside is left-aligned */
+}
+
+.cv-download-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: none;
+    cursor: pointer;
+    transform-style: preserve-3d; /* Allows for 3D effects */
+    perspective: 1000px;
+}
+
+.cv-download-button:hover {
+    background-color: #2a2d31;
+    transform: translateZ(10px) rotateY(10deg); /* Adds 3D depth on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.cv-icon {
+    margin-right: 10px;
+    width: 20px; /* Adjusts the icon to a smaller size */
+    height: auto;
+    transform: translateZ(20px); /* Gives the icon a 3D pop-out effect */
+    transition: transform 0.3s ease; /* Smooth transition for the 3D effect */
+}
+
+.cv-download-button:hover .cv-icon {
+    transform: translateZ(30px) rotateY(-15deg); /* Further enhances the 3D effect on hover */
+}
