@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mohammed Nihal</title>
+    <link rel="stylesheet" href="{% static 'css/stylecontact.css' %}">
+</head>
+<body>
+
+    <video class="background-video" autoplay muted loop>
+        <source src="{% static 'videos/200636-913478601.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h1>Get in Touch</h1>
+    <p>I'd love to hear from you! Reach out through any of the platforms below.</p>
+
+    <div class="contact-container">
+        <div class="contact-item">
+            <a href="https://www.instagram.com/__nihal_00?igsh=aTZyeTVxM3ExcjJy">
+                <img src="https://img.icons8.com/color/50/000000/instagram-new.png" alt="Instagram Icon">
+                <span>@__nihal_00</span>
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <a href="tel:+91 7592091121">
+                <img src="https://img.icons8.com/color/50/000000/phone.png" alt="Phone Icon">
+                <span>+91 7592091121</span>
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <a href="https://www.linkedin.com/in/mohammed-nihal-8a2072234">
+                <img src="https://img.icons8.com/color/50/000000/linkedin.png" alt="LinkedIn Icon">
+                <span>LinkedIn Profile</span>
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <a href="mailto:mohammednihal@gmail.com">
+                <img src="https://img.icons8.com/color/50/000000/email.png" alt="Email Icon">
+                <span>nihal@gmail.com</span>
+            </a>
+        </div>
+    </div>
+    <img src="{% static 'surprised phone.png' %}" alt="Your Avatar" class="avatar">
+
+    <p style="margin-top: 50px;">Thank you for visiting my portfolio!</p>
+
+</body>
+</html>

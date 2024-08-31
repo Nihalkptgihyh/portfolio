@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Site with Dark Mode</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <video autoplay muted loop class="loading-video">
+            <source src="{% static 'videos/22034-325238800_medium.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <header>
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Code.x</h1>
+            </div>
+            <ul class="button-list">
+                <li><a href="{% url 'about' %}" class="corner-button button1">About</a></li>
+                <li><a href="{% url 'qulification' %}" class="corner-button button1">Qualification</a></li>
+                <li><a href="{% url 'experince' %}" class="corner-button button1">Experience</a></li>
+                <li><a href="{% url 'contact' %}" class="corner-button button1">Contact</a></li>
+                <li><a href="{% url 'community' %}" class="corner-button join-community">Join Community</a></li>
+            </ul>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+    <div class="cv-button-container">
+        <a href="{% static 'Mohammed_Nihal_CV.pdf' %}" download class="cv-download-button">
+            <img src="{% static 'file.png' %}" alt="File Icon" class="cv-icon">MY CV
+        </a>
+    </div>
+    <div class="profile" style="text-align: center;">
+        <img src="{% static 'embarrassed spotlight.png' %}" alt="Your Avatar" class="avatar" width="550" height="auto">
+        <h1>MOHAMMED NIHAL</h1>
+        <p>Web Developer | Designer | Full-stack Developer</p>
+    </div>
+
+    <div class="boy-container">
+        <div class="boy" id="boy"></div>
+    </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script>
+        // JavaScript to hide the loading screen once the page is fully loaded
+        window.addEventListener('load', function () {
+            const loadingScreen = document.querySelector('.loading-screen');
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500); // Match this duration to the fade-out transition time
+        });
+    </script>
+</body>
+</html>
